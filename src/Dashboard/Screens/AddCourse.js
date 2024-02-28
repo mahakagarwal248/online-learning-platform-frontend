@@ -28,6 +28,7 @@ function AddCourse() {
     startDate: "01-01-2024",
     files: [],
   });
+  // eslint-disable-next-line no-unused-vars
   const { mutate, variables } = useMutation({
     mutationFn: async (data) => {
       return await addCourseAxios(data);

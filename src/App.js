@@ -1,15 +1,9 @@
 import "./App.css";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useNavigate,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Courses from "./Pages/Courses";
 import ScrollToTop from "./components/ScrollToTop";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import AdminHome from "./Dashboard/Pages/AdminHome";
 import Categories from "./Pages/Categories";
 import "react-toastify/dist/ReactToastify.css";
@@ -46,6 +40,7 @@ function App() {
     if (user?.id) {
       getProfileFunct(user);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <>

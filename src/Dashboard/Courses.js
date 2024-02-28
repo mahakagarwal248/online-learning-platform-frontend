@@ -1,17 +1,15 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { changeShow, changemodalStep } from "../store/webSlice";
 import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
 import TableComp from "../components/Table";
 import { setCourseData } from "../store/dashboardSlice";
 import { useQuery } from "@tanstack/react-query";
 import { addCourseByAuthorAxios } from "../helpers/axiosApi";
-import { useState } from "react";
 
 function Courses() {
   const {
     data: addedCourse = [],
     isPending,
-    isError,
   } = useQuery({
     // staleTime: 1000 * 10,
     queryKey: ["addedCourse"],
