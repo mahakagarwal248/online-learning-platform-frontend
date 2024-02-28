@@ -1,0 +1,38 @@
+.categories-div {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  transform: rotate(45deg);
+  margin: 15px 20px;
+  cursor: pointer;
+  border: 1px solid var(--primaryDark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-size: cover;
+  background: black;
+}
+
+.categories-p {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--secondaryLight) !important;
+  color: var(--primaryDark);
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  transition: opacity 0.8s, visibility 0.2s;
+  transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.categories-div:hover .categories-p {
+  visibility: visible;
+  opacity: 0.8;
+}
